@@ -12,6 +12,11 @@ Along with tools, we have a universal style standard:
 * 4 space indentions (for ease of use to transfer across IDEs)
 * You can use tabs or spaces, but I recommend tabs
 
+Finally, our deployment will be handled in this manner:
+* Heroku manages backend management
+* Heroku will pull from the GitHub repository
+
+
 Have fun developing!
 - Taylor Puckett :)
 
