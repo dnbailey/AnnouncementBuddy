@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -12,11 +13,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/announcements', function(req, res) {
-  res.render('announcements',{
-    announcement: 'hhhh',
-    datebeg: '8-1-17',
-    dateend: '8-6-17',
-  });
+  res.render('announcements');
 });
 
 app.listen('3000', function() {
