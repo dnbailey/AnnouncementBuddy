@@ -19,6 +19,14 @@ app.get('/announcements', function(req, res) {
   });
 });
 
+app.get('/add', function(req, res) {
+  res.render('AddAnn',{
+    announcement: 'hhhh',
+    datebeg: '8-1-17',
+    dateend: '8-6-17',
+  });
+});
+
 app.listen('3000', function() {
   console.log('[*] Listening on port 3000');
 })

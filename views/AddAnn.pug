@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div(id="mySidenav" class="sidenav")
+
+    a(href="javascript: void(0)" class="closebtn" onclick="closeNav()") &times;
+    a(href="#") Home
+    a(href="announcements") Announcements
+    a(href="#") #{user}
+
+  div(id="main")
+    span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+    h1(align="center") Add Announcement
+    form(method = "post" action = "/createAnn" name="addAnn")
+      label(for="title") Title:
+      input(type="text" class="title" name="title" required)
+      label(for="announcement") Announcement:
+      textarea(style="height: 20px; width: 30 px" name="announcement" required)
+      input(type="submit")
+      label(for="datebeg") Announcement Begin:
+      input(type="date" name="datebeg" required)
+      label(for="dateend") Announcement End:
+      input(type="date" name="dateend" required)
