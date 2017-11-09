@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div(id="mySidenav" class="sidenav")
+    
+    a(href="javascript: void(0)" class="closebtn" onclick="closeNav()") &times;
+    a(href="/") Home
+    a(href="/announcements") Announcements
+    a(href="#") #{user}
+
+  div(id="main")
+    span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+    h1(align="center") Home
