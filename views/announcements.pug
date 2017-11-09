@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  div(id="mySidenav" class="sidenav")
+    
+    a(href="javascript: void(0)" class="closebtn" onclick="closeNav()") &times;
+    a(href="/") Home
+    a(href="/announcements") Announcements
+    a(href="#") #{user}
+
+  div(id="main")
+    span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+    h1(align="center") Announcements
+      table
+        div(class="header")
+          tr
+            th Announcement
+            th Start Date
+            th End Date
+          tr
+            th(style="overflow-x: scroll;") #{announcement}
+            th #{datebeg}
+            th #{dateend}
+          tr
+            th(style="overflow-x: scroll;") #{announcement}
+            th #{datebeg}
+            th #{dateend}
+          tr
+            th(style="overflow-x: scroll;") #{announcement}
+            th #{datebeg}
+            th #{dateend}
+          tr
+            th(style="overflow-x: scroll;") #{announcement}
+            th #{datebeg}
+            th #{dateend}
+          tr
+            th(style="overflow-x: scroll;") #{announcement}
+            th #{datebeg}
+            th #{dateend}
+          tr
+            th(style="overflow-x: scroll;") #{announcement}
+            th #{datebeg}
+            th #{dateend}
+          tr
+            th(style="overflow-x: scroll;") #{announcement}
+            th #{datebeg}
+            th #{dateend}

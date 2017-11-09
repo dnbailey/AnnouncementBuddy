@@ -2,18 +2,15 @@
   "name": "jade_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "render.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon render.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "jade": "^1.11.0",
-    "nib": "^1.1.2",
     "nodemon": "^1.12.1",
-    "pug": "^2.0.0-rc.4",
-    "stylus": "^0.54.5"
+    "pug": "^2.0.0-rc.4"
   }
 }
