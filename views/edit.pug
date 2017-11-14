@@ -7,7 +7,7 @@ block content
       label(for="title") Title: 
       input(type="text" placeholder="Title" name="title" autofocus value=`${announcement.title}` required)
       label(for="ann") Announcement: 
-      textarea(placeholder="Announcement" name="ann" autofocus value=`` required) ${announcement.ann}
+      textarea(placeholder="Announcement" name="ann" autofocus value=`` required)= announcement.ann
       label(for="datebeg") Start Date: 
       input(type="date" name="datebeg" value=`${announcement.datebeg}` required) 
       label(for="dateend") End Date: 
