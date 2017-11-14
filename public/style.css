@@ -61,8 +61,5 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 .header {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-top: 2px solid gold;
 }
