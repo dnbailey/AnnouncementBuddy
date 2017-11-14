@@ -45,6 +45,7 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 table {
   font-family: "Lato", sans-serif;
   border-collapse: collapse;
@@ -54,15 +55,15 @@ table {
 }
 td, th {
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 .header {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-top: 1px solid gold;
+  border-bottom: 1px solid gold;
+  border-right: 1px solid gold;
   border-left: 1px solid black;
 }
