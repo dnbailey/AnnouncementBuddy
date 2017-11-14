@@ -4,7 +4,7 @@
   "description": "",
   "main": "render.js",
   "scripts": {
-    "server": "nodemon render.js"
+    "start": "nodemon render.js"
   },
   "author": "",
   "license": "ISC",
