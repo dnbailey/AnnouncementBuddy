@@ -47,19 +47,33 @@ body {
 }
 table {
   font-family: "Lato", sans-serif;
+  table-layout: fixed;
   border-collapse: collapse;
-  width: 100%;
-  height: 20px;
+  width: 75%;
+  height: 100px;
   overflow-y: scroll;
 }
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  overflow: auto;
+  overflow-x: scroll;
 }
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 .header {
   border-top: 2px solid gold;
+}
+.control {
+  text-decoration: none;
+  color: black;
+}
+.control:visited {
+  color: black;
+}
+.control:hover {
+  color: gold;
+  transition: .02s;
 }

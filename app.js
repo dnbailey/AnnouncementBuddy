@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // Database
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/announcements', { useMongoClient: true })
+mongoose.connect('mongodb://mongo:27017', { useMongoClient: true })
   .then(() =>  console.log('Connection to database succesful.'))
   .catch((err) => console.error(err))
 
