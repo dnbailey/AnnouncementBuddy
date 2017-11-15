@@ -55,4 +55,8 @@ router.post('/:id/edit', (req, res) => {
       res.redirect('/admin')
     })
 })
+function autoRemove() {
+
+}
+
 module.exports = router

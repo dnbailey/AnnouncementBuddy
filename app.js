@@ -24,6 +24,7 @@ mongoose.connect('mongodb://localhost/announcements', { useMongoClient: true })
 // Routes
 app.use('/', require('./routes/index.js'))
 app.use('/admin', require('./routes/announcements.js'))
+app.use('/login', require('./routes/login.js'))
 
 // Server
 app.listen('3000', () => {
