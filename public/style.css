@@ -64,7 +64,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 .header {
-  border-top: 2px solid gold;
+  border: 2px solid gold;
 }
 .control {
   text-decoration: none;
