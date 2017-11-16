@@ -1,47 +1,31 @@
 extends layout
 
 block content
-  div(id="mySidenav" class="sidenav")
-    
-    a(href="javascript: void(0)" class="closebtn" onclick="closeNav()") &times;
-    a(href="/") Home
-    a(href="/announcements") Announcements
-    a(href="#") #{user}
-
-  div(id="main")
-    span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
-    h1(align="center") Announcements
-      table
-        div(class="header")
-          tr
-            th Announcement
-            th Start Date
-            th End Date
-          tr
-            th(style="overflow-x: scroll;") #{announcement}
-            th #{datebeg}
-            th #{dateend}
-          tr
-            th(style="overflow-x: scroll;") #{announcement}
-            th #{datebeg}
-            th #{dateend}
-          tr
-            th(style="overflow-x: scroll;") #{announcement}
-            th #{datebeg}
-            th #{dateend}
-          tr
-            th(style="overflow-x: scroll;") #{announcement}
-            th #{datebeg}
-            th #{dateend}
-          tr
-            th(style="overflow-x: scroll;") #{announcement}
-            th #{datebeg}
-            th #{dateend}
-          tr
-            th(style="overflow-x: scroll;") #{announcement}
-            th #{datebeg}
-            th #{dateend}
-          tr
-            th(style="overflow-x: scroll;") #{announcement}
-            th #{datebeg}
-            th #{dateend}
+  form(action="/admin" method="post" align="center")
+    label(for="title") Title: 
+    input(type="text" placeholder="Title" name="title" autofocus required)
+    label(for="ann") Announcement: 
+    textarea(placeholder="Announcement" name="ann" autofocus required)
+    label(for="datebeg") Start Date: 
+    input(type="date" name="datebeg" required) 
+    label(for="dateend") End Date: 
+    input(type="date" name="dateend" required) 
+    button(type="submit") Submit
+      
+  table(align="center")
+    tr(class="header")
+      th Title
+      th Announcement
+      th Start Date (YYYY-MM-DD)
+      th End Date
+      th Controls
+      each announcement in announcements
+        tr
+          th= announcement.title
+          th= announcement.ann
+          th= announcement.datebeg
+          th= announcement.dateend
+          th
+            a(href=`/admin/${announcement._id}/delete` class="control") Delete 
+            a(href=`/admin/${announcement._id}/edit` class="control")  Edit
+  
