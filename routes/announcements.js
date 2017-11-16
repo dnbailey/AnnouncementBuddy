@@ -3,7 +3,7 @@ const moment = require('moment')
 const router = express.Router()
 const Announcement = require('../models/announcements.js')
 
-router.get('/', (req, res) => {
+router.get('/', isLoggedIn, (req, res) => {
   Announcement.find()
     .then(announcements => res.render('announcements.pug', {announcements}))
     .catch(err => console.log(err))
@@ -55,8 +55,10 @@ router.post('/:id/edit', (req, res) => {
       res.redirect('/admin')
     })
 })
-function autoRemove() {
-
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated())
+        return next();
+    res.redirect('/');
 }
 
 module.exports = router
