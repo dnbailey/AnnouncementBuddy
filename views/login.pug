@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div(id="mySidenav" class="sidenav")
+    a(href="javascript: void(0)" class="closebtn" onclick="closeNav()") &times;
+    a(href="#") Home
+    a(href="announcements") Announcements
+    a(href="#") #{user}
+
+  div(id="main")
+    span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+    h1(align="center") Log In
+    form(name="login" action="/login" method="POST" align="center")
+      label(for="emailAddress") Email
+      input(type="email" name="emailAddress" placeholder="Enter your email address here" required)
+      label(for="password") Password
+      input(type="password" name="password" placeholder="Enter your password here" required)
+      input(type="submit")
