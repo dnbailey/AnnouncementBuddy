@@ -1,11 +1,10 @@
 extends layout
 
 block content
-  div(id="mySidenav" class="sidenav")
-    a(href="javascript: void(0)" class="closebtn" onclick="closeNav()") &times;
-    a(href="#") Home
-    a(href="announcements") Announcements
+
+  include sidenav.pug
   span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+
   form(action="/admin" method="post" align="center")
     label(for="title") Title:
     input(type="text" placeholder="Title" name="title" autofocus required)
