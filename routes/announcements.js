@@ -1,15 +1,14 @@
 const express = require('express')
-const moment = require('moment')
 const router = express.Router()
 const Announcement = require('../models/announcements.js')
-
+const passport = require('passport');
 router.get('/', isLoggedIn, (req, res) => {
   Announcement.find()
     .then(announcements => res.render('announcements.pug', {announcements}))
     .catch(err => console.log(err))
 })
 
-router.post('/', (req, res) => {
+router.post('/', isLoggedIn, (req, res) => {
   let announcement = new Announcement({
     title: req.body.title,
     ann: req.body.ann,
@@ -20,13 +19,13 @@ router.post('/', (req, res) => {
   res.redirect('/admin')
 })
 
-router.get('/:id/delete', function(req, res){
+router.get('/:id/delete', isLoggedIn, (req, res) => {
 	Announcement.remove({_id: req.params.id})
 		.then(res.redirect('/admin'))
     .catch(err => console.log(err))
 })
 // update
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', isLoggedIn, (req, res) => {
   Announcement.find({_id: req.params.id})
     .then(announcements => res.render('edit.pug', {
       'title': 'Title',
@@ -35,7 +34,7 @@ router.get('/:id/edit', (req, res) => {
     .catch(err => console.log(err))
 })
 
-router.post('/:id/edit', (req, res) => {
+router.post('/:id/edit', isLoggedIn, (req, res) => {
   const announcement = {
     id: req.params.id,
     title: req.body.title,
@@ -55,10 +54,15 @@ router.post('/:id/edit', (req, res) => {
       res.redirect('/admin')
     })
 })
+router.get('/logout', isLoggedIn, (req, res) => {
+  req.session.destroy(function(err) {
+    req.logout();
+    res.redirect('/');
+  });
+});
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
         return next();
     res.redirect('/');
 }
-
 module.exports = router

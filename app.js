@@ -9,7 +9,6 @@ const cookieParser = require('cookie-parser');
 const session      = require('express-session');
 const app          = express()
 const configDB = require('./config/database.js');
-
 // Setup Views with Pug
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
@@ -20,8 +19,9 @@ app.use(express.static('public'))
 // Parse form and urls
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(morgan('dev')); 
+app.use(morgan('dev'));
 app.use(cookieParser());
+
 // Database
 mongoose.Promise = global.Promise
 mongoose.connect(configDB.url, { useMongoClient: true })
@@ -32,10 +32,11 @@ app.use(session({ secret: 'thebestapplicationever' }))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(flash())
+require('./config/passport.js')(passport)
 // Routes
-app.use('/', require('./routes/index.js'))(app, passport)
-app.use('/admin', require('./routes/announcements.js'))(app, passport)
-app.use('/login', require('./routes/login.js'))(app, passport)
+app.use('/', require('./routes/index.js'));
+app.use('/admin', require('./routes/announcements.js'))
+
 
 // Server
 app.listen('3000', () => {

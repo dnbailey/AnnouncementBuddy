@@ -1,19 +1,40 @@
 {
-  "name": "announcements",
-  "version": "1.0.0",
-  "description": "",
+  "name": "chatty",
+  "version": "0.1.0",
+  "description": "Node.js authenticated chat application.",
   "main": "app.js",
   "scripts": {
-    "server": "nodemon app.js"
+    "test": "node app.js",
+    "start": "node app.js"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snhs-r3c0n/Chatty.git"
+  },
+  "keywords": [
+    "chat",
+    "application"
+  ],
+  "author": "Taylor Puckett",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/snhs-r3c0n/Chatty/issues"
+  },
+  "homepage": "https://github.com/snhs-r3c0n/Chatty#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
-    "mongoose": "^4.13.1",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.3",
+    "mongoose-timestamps": "0.0.1",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "pathname": "^0.9.0",
     "pug": "^2.0.0-rc.4"
   }
 }

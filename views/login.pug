@@ -1,7 +1,10 @@
 extends layout
 
 block content
+  div(class="errmsg")
+    if message.length > 0
+      p= message
   form(name="login" action="/login" method="POST" align="center")
-    input(type="text" name="user" autofocus autocomplete="on" required)
+    input(type="text" name="username" autofocus autocomplete="on" required)
     input(type="password" name="password" autofocus autocomplete="off" required)
     button(type="submit" value="Submit") Log In
