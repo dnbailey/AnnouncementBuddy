@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+
 body {
-    font-family: "Lato", sans-serif;
+  font-family: 'Germania One', cursive;
 }
 
 .sidenav {
@@ -76,4 +78,15 @@ tr:nth-child(even) {
 .control:hover {
   color: gold;
   transition: .02s;
+}
+
+form{
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+  width: 62%;
+}
+
+textarea {
+  resize: none;
 }
