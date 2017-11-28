@@ -8,11 +8,14 @@ const morgan       = require('morgan');
 const cookieParser = require('cookie-parser');
 const session      = require('express-session');
 const app          = express()
+const helmet       = require('helmet');
 const configDB = require('./config/database.js');
 // Setup Views with Pug
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
+// helmet
+app.use(helmet());
 // Public Files
 app.use(express.static('public'))
 
@@ -36,7 +39,6 @@ require('./config/passport.js')(passport)
 // Routes
 app.use('/', require('./routes/index.js'));
 app.use('/admin', require('./routes/announcements.js'))
-
 
 // Server
 app.listen('3000', () => {

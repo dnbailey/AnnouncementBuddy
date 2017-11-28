@@ -2,13 +2,13 @@ const express = require('express')
 const router = express.Router()
 const Announcement = require('../models/announcements.js')
 const passport = require('passport');
-router.get('/', isLoggedIn, (req, res) => {
+router.get('/', (req, res) => {
   Announcement.find()
     .then(announcements => res.render('announcements.pug', {announcements}))
     .catch(err => console.log(err))
 })
 
-router.post('/', isLoggedIn, (req, res) => {
+router.post('/',  (req, res) => {
   let announcement = new Announcement({
     title: req.body.title,
     ann: req.body.ann,
