@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     .then(announcements => res.render('announcements.pug', {announcements}))
     .catch(err => console.log(err))
 })
-router.post('/add', (req, res) => {
+router.post('/', (req, res) => {
   let announcement = new Announcement({
     title: req.body.title,
     ann: req.body.ann,

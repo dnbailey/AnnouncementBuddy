@@ -6,6 +6,9 @@ block content
 
   div(id="main")
     h1(align="center") Home
+    each announcement, index in announcements
+      div(id=index+1 class="slide")
+        p= announcement.ann
 
   script(type="text/javascript").
     function openNav() {
