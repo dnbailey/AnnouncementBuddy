@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  include templates/sidenav.pug
+  span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+
+  h1
+
+  .slides
+      div(id="0" class="slide")
+        div(class="slide-body")
+          h2 Welcome to
+          h1 Sullivan North
+      each announcement, index in announcements
+        div(id=index+1 class="slide")
+          div(class="slide-body")
+            h2= announcement.title
+            p= announcement.ann
+  script(type="text/javascript").
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }

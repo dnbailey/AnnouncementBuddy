@@ -1,6 +1,7 @@
 extends layout
 
 block content
+<<<<<<< HEAD
   form(action="/admin" method="post")
     label(for="title") Title: 
     input(type="text" placeholder="Title" name="title" autofocus required)
@@ -30,3 +31,47 @@ block content
               a(href=`/admin/${announcement._id}/delete`) Delete
               a(href=`/admin/${announcement._id}/edit`) Edit
   
+=======
+
+  include templates/sidenav.pug
+  span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+
+  form(action="/admin" method="post" align="center")
+    label(for="title") Title:
+    input(type="text" placeholder="Title" name="title" autofocus required)
+    label(for="ann") Announcement:
+    textarea(placeholder="Announcement" name="ann" autofocus required)
+    label(for="datebeg") Start Date:
+    input(type="date" name="datebeg" required)
+    label(for="dateend") End Date:
+    input(type="date" name="dateend" required)
+    button(type="submit") Submit
+
+  table(align="center")
+    tr(class="header")
+      th Title
+      th Announcement
+      th Start Date (YYYY-MM-DD)
+      th End Date
+      th Controls
+      each announcement in announcements
+        tr
+          th= announcement.title
+          th= announcement.ann
+          th= announcement.datebeg
+          th= announcement.dateend
+          th
+            a(href=`/admin/${announcement._id}/delete` class="control") Delete
+            a(href=`/admin/${announcement._id}/edit` class="control")  Edit
+
+  script(type="text/javascript").
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+>>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142

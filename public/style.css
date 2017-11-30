@@ -1,5 +1,46 @@
+<<<<<<< HEAD
 body {
     font-family: "Lato", sans-serif;
+=======
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+
+body {
+  font-family: 'Germania One', cursive;
+}
+
+.slide {
+  height: calc(100vh - 50px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  color: #322A08;
+  padding-top: 50px;
+}
+
+.slide h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  line-height: 0.75em;
+}
+
+.slide h2 {
+  line-height: 0.25em;
+}
+
+.slide .slide-body {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.slide img {
+  max-width: 500px;
+}
+
+.show {
+  display: flex;
+>>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
 }
 
 .sidenav {
@@ -47,22 +88,64 @@ body {
 }
 table {
   font-family: "Lato", sans-serif;
+<<<<<<< HEAD
   border-collapse: collapse;
   width: 100%;
   height: 20px;
+=======
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 75%;
+  height: 100px;
+>>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
   overflow-y: scroll;
 }
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+<<<<<<< HEAD
+=======
+  overflow: auto;
+  overflow-x: scroll;
+>>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
 }
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 .header {
+<<<<<<< HEAD
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
   border-left: 1px solid black;
+=======
+  border: 2px solid gold;
+}
+.control {
+  text-decoration: none;
+  color: black;
+}
+.control:visited {
+  color: black;
+}
+.control:hover {
+  color: gold;
+  transition: .02s;
+}
+
+form{
+  display: flex;
+  align-content: center;
+  margin: 0 auto;
+  width: 62%;
+}
+
+textarea {
+  resize: none;
+}
+
+label title {
+  
+>>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
 }
