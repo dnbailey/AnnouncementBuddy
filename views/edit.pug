@@ -1,21 +1,6 @@
 extends layout
 
 block content
-<<<<<<< HEAD
-  h1= title
-  each announcement in announcements
-    form(action=`/admin/${announcement._id}/edit` method="post")
-      label(for="title") Title: 
-      input(type="text" placeholder="Title" name="title" autofocus value=`${announcement.title}` required)
-      label(for="ann") Announcement: 
-      textarea(placeholder="Announcement" name="ann" autofocus value=`` required) ${announcement.ann}
-      label(for="datebeg") Start Date: 
-      input(type="date" name="datebeg" value=`${announcement.datebeg}` required) 
-      label(for="dateend") End Date: 
-      input(type="date" name="dateend" value=`${announcement.dateend}` required) 
-      button(type="submit") Submit
-=======
-
   include templates/sidenav.pug
   span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
   h1(align="center") Edit
@@ -41,4 +26,3 @@ block content
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("main").style.marginLeft= "0";
     }
->>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142

@@ -1,8 +1,4 @@
 const express = require('express')
-<<<<<<< HEAD
-const moment = require('moment')
-=======
->>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
 const router = express.Router()
 const Announcement = require('../models/announcements.js')
 
@@ -11,10 +7,6 @@ router.get('/', (req, res) => {
     .then(announcements => res.render('announcements.pug', {announcements}))
     .catch(err => console.log(err))
 })
-<<<<<<< HEAD
-
-=======
->>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
 router.post('/', (req, res) => {
   let announcement = new Announcement({
     title: req.body.title,
@@ -24,12 +16,7 @@ router.post('/', (req, res) => {
   })
   announcement.save()
   res.redirect('/admin')
-<<<<<<< HEAD
-})
-
-=======
 });
->>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
 router.get('/:id/delete', function(req, res){
 	Announcement.remove({_id: req.params.id})
 		.then(res.redirect('/admin'))
@@ -65,11 +52,4 @@ router.post('/:id/edit', (req, res) => {
       res.redirect('/admin')
     })
 })
-<<<<<<< HEAD
-function autoRemove() {
-
-}
-
-=======
->>>>>>> 3e6151238c1fb0c64e465ce0f143d38c4d28c142
 module.exports = router
