@@ -1,15 +1,22 @@
 extends layout
 
 block content
+<<<<<<< HEAD
   h1 Edit
+=======
+  include sidenav.pug
+  span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+
+  h1= title
+>>>>>>> addann
   each announcement in announcements
     form(action=`/admin/${announcement._id}/edit` method="post")
-      label(for="title") Title: 
+      label(for="title") Title:
       input(type="text" placeholder="Title" name="title" autofocus value=`${announcement.title}` required)
-      label(for="ann") Announcement: 
+      label(for="ann") Announcement:
       textarea(placeholder="Announcement" name="ann" autofocus value=`` required)= announcement.ann
-      label(for="datebeg") Start Date: 
-      input(type="date" name="datebeg" value=`${announcement.datebeg}` required) 
-      label(for="dateend") End Date: 
-      input(type="date" name="dateend" value=`${announcement.dateend}` required) 
+      label(for="datebeg") Start Date:
+      input(type="date" name="datebeg" value=`${announcement.datebeg}` required)
+      label(for="dateend") End Date:
+      input(type="date" name="dateend" value=`${announcement.dateend}` required)
       button(type="submit") Submit

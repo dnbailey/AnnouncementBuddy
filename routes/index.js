@@ -4,7 +4,7 @@ const Announcement = require('../models/announcements.js')
 
 router.get('/', (req, res) => {
   Announcement.find()
-    .then(announcements => res.render('index.pug', {announcements}))
+    .then(announcements => res.render('home.pug', {announcements}))
     .catch(console.log(this.err))
 })
 
