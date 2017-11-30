@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
     .then(announcements => res.render('announcements.pug', {announcements}))
     .catch(err => console.log(err))
 })
-
 router.post('/', (req, res) => {
   let announcement = new Announcement({
     title: req.body.title,
@@ -17,8 +16,7 @@ router.post('/', (req, res) => {
   })
   announcement.save()
   res.redirect('/admin')
-})
-
+});
 router.get('/:id/delete', function(req, res){
 	Announcement.remove({_id: req.params.id})
 		.then(res.redirect('/admin'))

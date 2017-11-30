@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+  div(id="main")
+    span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+    h1(align="center") Log In
+    form(name="login" action="/login" method="POST" align="center")
+      label(for="emailAddress") Email
+      input(type="email" name="emailAddress" placeholder="Enter your SNHS email address here" pattern="/^[a-z0-9._%+-]+@sullivank12.net/" min= "6" max= "256" required)
+      label(for="password") Password
+      input(type="password" name="password" placeholder="Enter your password here" required)
+      input(type="submit")

@@ -1,17 +1,21 @@
 extends layout
 
 block content
+
+  include templates/sidenav.pug
+  span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
+
   form(action="/admin" method="post" align="center")
-    label(for="title") Title: 
+    label(for="title") Title:
     input(type="text" placeholder="Title" name="title" autofocus required)
-    label(for="ann") Announcement: 
+    label(for="ann") Announcement:
     textarea(placeholder="Announcement" name="ann" autofocus required)
-    label(for="datebeg") Start Date: 
-    input(type="date" name="datebeg" required) 
-    label(for="dateend") End Date: 
-    input(type="date" name="dateend" required) 
+    label(for="datebeg") Start Date:
+    input(type="date" name="datebeg" required)
+    label(for="dateend") End Date:
+    input(type="date" name="dateend" required)
     button(type="submit") Submit
-      
+
   table(align="center")
     tr(class="header")
       th Title
@@ -26,6 +30,16 @@ block content
           th= announcement.datebeg
           th= announcement.dateend
           th
-            a(href=`/admin/${announcement._id}/delete` class="control") Delete 
+            a(href=`/admin/${announcement._id}/delete` class="control") Delete
             a(href=`/admin/${announcement._id}/edit` class="control")  Edit
-  
+
+  script(type="text/javascript").
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
