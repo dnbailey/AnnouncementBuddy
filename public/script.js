@@ -13,5 +13,5 @@ document.addEventListener("DOMContentLoaded", function(){
     slides[currentSlide].classList.add('show')
   }
 
-  setInterval(nextSlide, 10000)
+  setInterval(nextSlide, 7000)
 })
