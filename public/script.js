@@ -5,8 +5,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // Show the initial slide
   slides[0].classList.toggle('show')
-
+  const backgroundColors = [
+    "#ccc",
+    "#fff",
+    "#fad529"
+  ]
   function nextSlide() {
+    document.body.style.backgroundColor = backgroundColors[currentColor]
+    currentColor = (currentColor + 1) % backgroundColors.length
     // Toggle the Current Slide
     slides[currentSlide].classList.remove('show')
     currentSlide = (currentSlide + 1) % slides.length

@@ -24,9 +24,11 @@ mongoose.connect('mongodb://mongo:27017', { useMongoClient: true })
 // Routes
 app.use('/', require('./routes/index.js'))
 app.use('/admin', require('./routes/announcements.js'))
-app.use('/login', require('./routes/login.js'))
 app.get('/login', (req, res) => {
   res.render('login')
+})
+app.get('/tv', (req, res) => {
+  res.render('./views/tv.pug');
 })
 // Server
 app.listen('3000', () => {

@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  include templates/sidenav.pug
+  include sidenav.pug
   span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
-  h1(align="center") Edit
+
+  h1= title
   each announcement in announcements
     form(action=`/admin/${announcement._id}/edit` method="post")
       label(for="title") Title:
@@ -15,14 +16,3 @@ block content
       label(for="dateend") End Date:
       input(type="date" name="dateend" value=`${announcement.dateend}` required)
       button(type="submit") Submit
-
-  script(type="text/javascript").
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-    }

@@ -1,8 +1,6 @@
 extends layout
 
 block content
-  include templates/sidenav.pug
-  span(style="font-size: 30px; cursor: pointer;" onclick="openNav()") &#9776;
   header1.header1
       a(href="/")
         img(src="images/logo.png")
@@ -16,7 +14,6 @@ block content
           div(class="slide-body")
             h2= announcement.title
             p= announcement.ann
-
   script(type="text/javascript").
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
