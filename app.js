@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // Database
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://mongo:27017', { useMongoClient: true })
+mongoose.connect('mongodb://localhost:27017', { useMongoClient: true })
   .then(() =>  console.log('Connection to database succesful.'))
   .catch((err) => console.error(err))
 
@@ -31,6 +31,6 @@ app.get('/tv', (req, res) => {
   res.render('./views/tv.pug');
 })
 // Server
-app.listen('3000', () => {
+app.listen('8000', () => {
   console.log('Listening on port 3000')
 })
