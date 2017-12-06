@@ -5,7 +5,10 @@ AnnouncementBuddy is a announcement system that can be used in schools to get ri
 
 ## Stuff you need
 [Node.js](https://nodejs.org/en/)
+
 [Docker](https://www.docker.com/docker-windows) (Windows)
+
+[Docker](https://www.docker.com/docker-mac) (Mac)
 
 ## Downloading
 ```bash
@@ -17,6 +20,6 @@ cd AnnouncementBuddy
 ## Running
 Start up docker-compose
 ```bash
-
+docker-compose up
 ```
 
