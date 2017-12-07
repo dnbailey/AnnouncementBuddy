@@ -28,4 +28,5 @@ Kenderlyn Hill - Front-end
 Charlie Lane - Front-end
 Taylor Puckett - Back-end
 
+## Contributions
 [How to Contribute](CONTRIBUTE.md)
