@@ -24,11 +24,11 @@ docker-compose up
 ```
 
 ## Creators
-Kenderlyn Hill - Front-end
+Kenderlyn H. - Front-end
 
-Charlie Lane - Front-end
+Charlie L. - Front-end
 
-Taylor Puckett - Back-end
+Taylor P. - Back-end
 
 ## Contributions
 [How to Contribute](CONTRIBUTE.md)
