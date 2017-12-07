@@ -33,8 +33,6 @@ docker-compose up
 ## Contributions
 [How to Contribute](.github/CONTRIBUTE.md)
 
-Found a bug?
-[Issues Template](.github/ISSUES_TEMPLATE.md)
+[Found a bug?](.github/ISSUES_TEMPLATE.md)
 
-Got an idea?
-[Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md)
+[Got an idea?](.github/PULL_REQUEST_TEMPLATE.md)
