@@ -2,7 +2,7 @@
 Describe your issue here.
 
 ### Your environment
-* * version of angular-translate
+* version of angular-translate
 * version of angular
 * which browser and its version
 
