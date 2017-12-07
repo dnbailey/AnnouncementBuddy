@@ -31,4 +31,4 @@ Charlie L. - Front-end
 Taylor P. - Back-end
 
 ## Contributions
-[How to Contribute](CONTRIBUTE.md)
+[How to Contribute](.github/CONTRIBUTE.md)
