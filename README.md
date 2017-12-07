@@ -24,11 +24,15 @@ docker-compose up
 ```
 
 ## Creators
-Kenderlyn H. - Front-end
+Kenderlyn H. [Github](https://www.github.com/Kenderlyn) - Frontend
 
-Charlie L. - Front-end
+Charlie L. [Github](https://www.github.com/LaneCC) - Frontend
 
-Taylor P. - Back-end
+Taylor P. [Github](https://www.github.com/snhs-r3c0n) - Backend
 
 ## Contributions
 [How to Contribute](.github/CONTRIBUTE.md)
+
+[Issues Template](.github/ISSUES_TEMPLATE.md)
+
+[Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md)
