@@ -23,3 +23,9 @@ Start up docker-compose
 docker-compose up
 ```
 
+## Creators
+Kenderlyn Hill - Front-end
+Charlie Lane - Front-end
+Taylor Puckett - Back-end
+
+[How to Contribute](CONTRIBUTE.md)
